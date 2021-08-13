@@ -11,5 +11,8 @@ class Config(object):
     MAIL_USE_SSL = os.environ.get('MAIL_USE_SSL') is not None
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    JSON_AS_ASCII = False
     ADMINS = ['samuel.byland@vsmp.ch']
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 10
+    LANGUAGES = ['de', 'fr', 'it', 'en']
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
