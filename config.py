@@ -1,5 +1,8 @@
 import os
+from dotenv import load_dotenv
+
 basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join(basedir, '.env'))
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'YtDuRXcM8jX8V.TkVCVK'
@@ -11,8 +14,7 @@ class Config(object):
     MAIL_USE_SSL = os.environ.get('MAIL_USE_SSL') is not None
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    JSON_AS_ASCII = False
     ADMINS = ['samuel.byland@vsmp.ch']
-    POSTS_PER_PAGE = 10
     LANGUAGES = ['de', 'fr', 'it', 'en']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+    POSTS_PER_PAGE = 10
